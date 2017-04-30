@@ -1,0 +1,18 @@
+.font_em{
+    font-family:"Nanum Gothic",serif;
+    font-size:1em;
+    font-weight:bold;
+    text-decoration: underline;
+}
+.font_mark{
+    font-family:"Nanum Gothic",serif;
+    font-size:1em;
+    font-weight: bold;
+    background-color: rgba(255,0,0,.2);
+}
+.font_size{
+    font-family:"Nanum Gothic",serif;
+    font-size:17px;
+    font-weight:bold;
+    font-style: italic;
+}

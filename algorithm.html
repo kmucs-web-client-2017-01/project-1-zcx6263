@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="How to make tetris" />
+    <meta name="author" content="geikil@gmail.com" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <title>How To make Tetris</title>
+    <style>
+        .tetrisBlock {
+            list-style-image: url('tetrisList5.png');
+            padding: 5px 5px;
+        }
+        
+        h2::before {
+            content: url('algor.png');
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg"> </audio>
+    <div class="container">
+        <div class="header" id="header">
+            <h1>How to make Tetris !</h1> </div>
+        <div class="nav-left">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="main.html" class="nav-link">Introduction</a></li>
+                <li class="nav-item"><a href="firstSteps.html" class="nav-link">First Steps</a></li>
+                <li class="nav-item"><a href="makefile.html" class="nav-link">Makefile</a></li>
+                <li class="nav-item"><a href="algorithm.html" class="nav-link">Algorithm</a></li>
+                <li class="nav-item"><a href="finish.html" class="nav-link">Finish</a></li>
+            </ul>
+        </div>
+        <div class="content" width:600>
+            <h2> Algorithm</h2>
+            <ul>
+                <p>이 장은 작업 환경과 시작단계를 완료 했는데도 진행이 안되시는 분들만 참고 하셨으면 좋겠습니다.</p>
+                <li class="tetrisBlock">
+                    <h3>Design</h3></li>
+                <p>먼저 테트리스를 만들기 전에 전체적인 구조를 만드셔야 합니다. 저희는 C++로 진행 하기 때문에
+                    <br> 객체지향을 이용하여 class들 간에 inheritance과 abstract으로 시작하는걸 추천 드립니다.
+                    <br> 그러면 클래스별로 또는 기능별로 여러개의 파일이 나뉘게 되는데 makefile 은 꼭 필요한 것처럼
+                    <br> 보입니다. 그리고 교수님 ppt를 참고하면 구조적인 면은 해결 되니 참고하셔서 진행하시길 바랍니다.
+                    <li class="tetrisBlock">
+                        <h3>Implement</h3></li> 1차 제출은 구조적인 부분만 제출하면 되므로 기능적인 면은 추후에 올리겠습니다. </ul>
+            <div class="up">
+                <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html" class="nav-link">Log-in</a></li>
+                <li class="nav-item"><a href="signUp.html" class="nav-link">Sign up</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="input_text" /> </div>
+        <button type="search" class="sch_smit">검색</button>
+        <div class="footer">
+            <p>e.Mail : geikil@kookimin.ac.kr
+                <br> Tel. 010.8629.5674
+                <br> Made by WonYong Jang</p>
+        </div>
+    </div>
+</body>
+
+</html>

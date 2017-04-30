@@ -1,0 +1,63 @@
+.wrap {
+     width: 600px;
+     height: 500px;
+     margin: 0 auto;
+}
+.loginHeader {
+     font-size: 50px;
+     text-shadow: 0 0 10px #666;
+     color: #fff;
+     margin: 0 auto;
+     text-align: center;
+     text-transform: capitalize;
+     font-style: italic;
+}
+.form {
+     width: 498px;
+     height: 300px;
+     border-radius: 25px;
+     border: 5px double #999;
+     margin: 30px auto;
+}
+.form2 {
+     width: 380px;
+     min-width: 320px;
+     height: 200px;
+     margin: 70px auto;
+     margin-left:60px;
+}
+.form3 {
+      float: left;
+      padding: 0 2px
+}
+.form3 label {
+     width: 100px;
+     height: 20px;
+     float: left;
+}
+.form4 {
+     padding: 10px 0px 0px 70px;
+}
+.clear {
+     clear: both; /* 오른쪽 왼쪽 취소 깔끔하게 정렬하기위해서 */
+}
+input[type="submit"] { /* 로그인하기 버튼에만 효과 주기 */
+     float: left;
+     height: 54px;
+     background: #FFBB00;
+     border-radius: 5px;
+     border: none;
+     margin-left: 10px;
+     cursor:pointer;
+}
+.login button {
+     height: 30px;
+     color: #fff;
+     background: #333;
+     border-radius: 2px;
+     margin-top:10px;
+     margin-right:20px;
+}
+.login button:hover {
+        cursor:pointer; /*커서가 손가락으로 변함*/
+}

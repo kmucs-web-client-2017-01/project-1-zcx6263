@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="How to make tetris" />
+    <meta name="author" content="geikil@gmail.com" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <title>How To make Tetris</title>
+    <style>
+        .tetrisBlock {
+            list-style-image: url('tetrisList4.png');
+            padding: 5px 5px;
+        }
+        
+        h2::before {
+            content: url('tetrisBlock2.png');
+            padding: 10px;
+        }
+        
+        .source a:hover {
+            color: dodgerblue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg"> </audio>
+    <div class="container">
+        <div class="header" id="header">
+            <h1>How to make Tetris !</h1> </div>
+        <div class="nav-left">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="main.html" class="nav-link">Introduction</a></li>
+                <li class="nav-item"><a href="firstSteps.html" class="nav-link">First Steps</a></li>
+                <li class="nav-item"><a href="makefile.html" class="nav-link">Makefile</a></li>
+                <li class="nav-item"><a href="algorithm.html" class="nav-link">Algorithm</a></li>
+                <li class="nav-item"><a href="finish.html" class="nav-link">Finish</a></li>
+            </ul>
+        </div>
+        <div class="content" width:600>
+            <h2> Finish !</h2>
+            <ul>
+                <li class="tetrisBlock">
+                    <h3>Review</h3></li>
+                <p>This page is that it was created to help you with your assignment about making tetris.
+                    <br> But, I learned a lot while doing this project. At first, It was too difficult to creat a web page.
+                    <br> As I proceeded step by step, I completed the project. Also, I had the opportunity to see the
+                    <br> c++ assignment again.</p>
+                <p>I am really grateful to the professor who gave me this opportunity.</p>
+                <li class="tetrisBlock">
+                    <h3>Source</h3></li>
+                <ol type="I">
+                    <li class="source"><a href="https://wiki.kldp.org/wiki.php/NCURSES-Programming-HOWTO" target="_blank">NCURSES 한국어번역</a></li>
+                    <br>
+                    <li class="source"><a href="https://www.gnu.org/software/ncurses/" target="_blank">GPU ncurses</a></li>
+                    <br>
+                    <li class="source"><a href="http://bowbowbow.tistory.com/12" target="_blank">makefile</a></li>
+                    <br> </ol>
+            </ul>
+            <div class="up">
+                <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html" class="nav-link">Log-in</a></li>
+                <li class="nav-item"><a href="signUp.html" class="nav-link">Sign up</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="input_text" /> </div>
+        <button type="search" class="sch_smit">검색</button>
+        <div class="footer">
+            <p>e.Mail : geikil@kookimin.ac.kr
+                <br> Tel. 010.8629.5674
+                <br> Made by WonYong Jang</p>
+        </div>
+    </div>
+</body>
+
+</html>

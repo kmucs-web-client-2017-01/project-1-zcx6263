@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="How to make tetris" />
+    <meta name="author" content="geikil@gmail.com" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="signUp.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <title>How To make Tetris</title>
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg"> </audio>
+    <div class="container">
+        <div class="header" id="header">
+            <h1>How to make Tetris !</h1> </div>
+        <div class="nav-left">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="main.html" class="nav-link">Introduction</a></li>
+                <li class="nav-item"><a href="firstSteps.html" class="nav-link">First Steps</a></li>
+                <li class="nav-item"><a href="makefile.html" class="nav-link">Makefile</a></li>
+                <li class="nav-item"><a href="algorithm.html" class="nav-link">Algorithm</a></li>
+                <li class="nav-item"><a href="finish.html" class="nav-link">Finish</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <form class="signUp">
+                <fieldset>
+                    <legend>
+                        <h3>회원가입</h3></legend>
+                    <table border="1" width="750" height="400">
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">이름</td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">아이디</td>
+                            <td>
+                                <input type="text" />
+                                <input type="submit" value="아이디 중복검사" /> </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">암호</td>
+                            <td>
+                                <input type="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">암호확인</td>
+                            <td>
+                                <input type="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">주민번호</td>
+                            <td>
+                                <input type="text" maxlength="6" size="6" /> -
+                                <input type="text" maxlength="7" size="7" /> </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">연락처</td>
+                            <td>
+                                <select>
+                                    <option value="t010">010</option>
+                                    <option value="t011">011</option>
+                                    <option value="t016">016</option>
+                                    <option value="t017">017</option>
+                                    <option value="t019">019</option>
+                                </select> -
+                                <input type="text" maxlength="4" size="4" /> -
+                                <input type="text" maxlength="4" size="4" /> </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">코딩경력</td>
+                            <td>
+                                <select name="selinfor">
+                                    <option value="0">선택해주세요</option>
+                                    <option value="1">기초</option>
+                                    <option value="2">6개월이상</option>
+                                    <option value="3">1년이상</option>
+                                    <option value="4">2년이상</option>
+                                    <option value="5">3년이상</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">메일링</td>
+                            <td>
+                                <input type="radio" id="ag1" name="yes" checked="checked" />
+                                <label name="yes" for="ag1">받겠습니다.</label>
+                                <input type="radio" id="ag2" name="yes" />
+                                <label name="yes" for="ag2">받지않겠습니다.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">약관동의</td>
+                            <td>
+                                <input type="checkbox" id="agree" checked="checked" />
+                                <label for="agree">동의합니다.</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button type="submit">가입하기</button>
+                    <button type="reset">다시쓰기</button>
+                </fieldset>
+            </form>
+            <div class="up">
+                <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html" class="nav-link">Log-in</a></li>
+                <li class="nav-item"><a href="signUp.html" class="nav-link">Sign up</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="input_text" /> </div>
+        <button type="search" class="sch_smit">검색</button>
+        <div class="footer">
+            <p>e.Mail : geikil@kookimin.ac.kr
+                <br> Tel. 010.8629.5674
+                <br> Made by WonYong Jang</p>
+        </div>
+    </div>
+</body>
+
+</html>

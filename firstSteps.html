@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="How to make tetris" />
+    <meta name="author" content="geikil@gmail.com" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <title>How To make Tetris</title>
+    <style>
+        .tetrisBlock {
+            list-style-image: url('tetrisList2.png');
+            padding: 5px 5px;
+        }
+        
+        h2::before {
+            content: url('vi.png');
+            padding: 10px;
+        }
+        .image_border {
+            border:2px solid black;
+            box-shadow:3px 3px 5px black;
+        }
+        .image_border:hover {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg"> </audio>
+    <div class="container">
+        <div class="header" id="header">
+            <h1>How to make Tetris !</h1> </div>
+        <div class="nav-left">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="main.html" class="nav-link">Introduction</a></li>
+                <li class="nav-item"><a href="firstSteps.html" class="nav-link">First Steps</a></li>
+                <li class="nav-item"><a href="makefile.html" class="nav-link">Makefile</a></li>
+                <li class="nav-item"><a href="algorithm.html" class="nav-link">Algorithm</a></li>
+                <li class="nav-item"><a href="finish.html" class="nav-link">Finish</a></li>
+            </ul>
+        </div>
+        <div class="content" width:600>
+            <h2>  What is NCURSES ?</h2>
+            <ul>
+                <p><span class="font_mark">NCURSES</span> 는 원래의 System V Release 4.0(SVr4) curses 의 클론입니다. 그것은 자유롭게 배포될수
+                    <br>있는 라이브러리이며, curses 의 구버전과 완벽히 호환됩니다. 쉽게말해 어플리케이션의 문자표현 -cell terminals 을 다루는 함수들의 라이브러리 입니다. 이제 이후로는 curses 와 <span class="font_mark">NCURSES</span> 는 같은 뜻으로
+                    <br>쓰일 것 입니다.</p>
+                <li class="tetrisBlock">
+                    <h4>What we can do with NCURSES ?</h3></li>
+		<p><span class="font_mark">NCURSES</span> 는 터미널 기능의 wrapper 를 만들어줄 뿐만 아니라 텍스트모드에서 멋진 <abbr title="User Interface">UI</abbr> 를 만들수 있는 튼튼한 프레임웍도 제공합니다. 그것은 윈도우등을 만들 수 있는 함수를 제공합니다. 그것의 자매 라이브러리인 패널,<br> 메뉴, 폼등은 기본적인 curses 라이브러리에 확장성을 제공합니다.
+                    <br>이 라이브러리들은 보통 curses 와 같이 설치됩니다. 누구나 다중 윈도우와 메뉴, 패털 그리고
+                    <br>폼을 포함하고 있는 어플리케이션을 작성할 수 있습니다.</p>
+                <p><span class="font_mark">NCURSES</span> 는 보통 설치할때 자동으로 깔리기 때문에 우리는 이제 컴파일을 해보겠습니다.</p>
+                <li class="tetrisBlock">
+                    <h3>Compiling With the NCURSES Library</h3></li> <img src="compile.PNG" width=100% height=300px alt="Not display" class="image_border" title="compiling">
+		<p>위 프로그램은 화면을 저장하고 컴파일할때는 <span class="font_em">g++ -o hello hello.cpp -lncurses</span>로 컴파일을 합니다.<br> 여기서 프로젝트를 직접 진행하면서 얻은 팁은 나중에 되면 파일 갯수가 늘어나게 되므로 컴파일할때도 명령어가 길어지게 되므로 makefile을 만들면 make 만 입력하게되면 컴파일을 손쉽게 할수 있습니다. <a href="makefile.html">makefile</a>은<br> 다음 장에서 소개하겠습니다. </p>
+                <li class="tetrisBlock">
+                    <h3>Initialization functions</h3></li>
+                <p>수업시간에 알려주신 함수 이외에 몇가지 함수를 소개하겠습니다.</p>
+                <ol type="I">
+                    <li> <span class="font_size">raw() 와 cbreak()</span>
+                        <br>보통 터미널 드라이버는 new line 들어올 때까지 사용자가 입력한 내용을 버퍼링합니다.
+                        <br> 그러나 대부분의 프로그램들은 사용자가 타이핑을 하고나서 될 수 있는 한 빨리 그
+                        <br>문자들을 필요로 합니다.
+                        <br> <span class="font_em">위의 두 함수는 라인 버퍼링을 비활성화 시키는 데 자주 사용됩니다.</span> </li>
+                    <li> <span class="font_size">echo()와 noecho()</span>
+                        <br>
+                        <sapn class="font_em">이 함수들은 사용자들이 터미널에 입력한 문자들을 echoing 할 것인지 제어합니다.</sapn>
+                        <br> echoing 에 대한 더 많은 제어를 하기 위해서나 또는 getch() 등의 함수로 사용자들에게서 입력을
+                        <br>받고 있을 때 불필요한 echoing 을 없애기 위해서 이 함수들이 필요할 것입니다. 대부분의
+                        <br>인터랙티브한 프로그램들은 noecho() 를 초기화때 호출하고 필요할때면 제어를 통해 echoing 을
+                        <br>합니다. 이렇게 하면 프로그래머는 윈도우의 (y,x) 의 위치를 굳이 갱신시키지 않더라도 필요한
+                        <br>위치에 문자들을 echoing 할수 있는 융통성을 가지게 됩니다. </li>
+                    <li> <span class="font_size">keypad()</span>
+                        <br><span class="font_em">이 함수는 F1, F2, 방향키 같은 기능키들을 입력받을 수 있게 합니다.</span> 방향키들은 어떠한 사용자
+                        <br> 인터페이스에서도 큰 비중을 차지하듯이, 거의 모든 인터랙티브한 프로그램들은 이 기능들을 필요로 한다. keypad(stdscr, TRUE) 를 호출하는 것은 일반 화면인 (stdscr) 에서 이 기능을 쓰게 합니다.
+                        <p>우리 프로젝트에서 필요로 할 것 같은 함수들을 소개했고 아래 그림으로 연습해 보시면 됩니다.</p> <img src="function.PNG" width=100% height=400px alt="Not display" title="Initialization function" class="image_border"> </li>
+                </ol>
+            </ul>
+            <div class="up">
+                <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html" class="nav-link">Log-in</a></li>
+                <li class="nav-item"><a href="signUp.html" class="nav-link">Sign up</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="input_text" /> </div>
+        <button type="search" class="sch_smit">검색</button>
+        <div class="footer">
+            <p>e.Mail : geikil@kookimin.ac.kr
+                <br> Tel. 010.8629.5674
+                <br> Made by WonYong Jang</p>
+        </div>
+    </div>
+</body>
+
+</html>
