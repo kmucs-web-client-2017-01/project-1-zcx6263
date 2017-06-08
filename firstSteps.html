@@ -27,8 +27,9 @@
             border: 1px solid black;
         }
     </style>
-</head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
 
+</head>
 <body>
     <audio autoplay loop>
         <source src="music.mp3" type="audio/mpeg"> </audio>
@@ -45,20 +46,20 @@
             </ul>
         </div>
         <div class="content" width:600>
-            <h2>  What is NCURSES ?</h2>
+            <h2>  What is <span id="blink">NCURSES ?</span></h2>
             <ul>
                 <p><span class="font_mark">NCURSES</span> 는 원래의 System V Release 4.0(SVr4) curses 의 클론입니다. 그것은 자유롭게 배포될수
                     <br>있는 라이브러리이며, curses 의 구버전과 완벽히 호환됩니다. 쉽게말해 어플리케이션의 문자표현 -cell terminals 을 다루는 함수들의 라이브러리 입니다. 이제 이후로는 curses 와 <span class="font_mark">NCURSES</span> 는 같은 뜻으로
                     <br>쓰일 것 입니다.</p>
                 <li class="tetrisBlock">
-                    <h4>What we can do with NCURSES ?</h3></li>
-		<p><span class="font_mark">NCURSES</span> 는 터미널 기능의 wrapper 를 만들어줄 뿐만 아니라 텍스트모드에서 멋진 <abbr title="User Interface">UI</abbr> 를 만들수 있는 튼튼한 프레임웍도 제공합니다. 그것은 윈도우등을 만들 수 있는 함수를 제공합니다. 그것의 자매 라이브러리인 패널,<br> 메뉴, 폼등은 기본적인 curses 라이브러리에 확장성을 제공합니다.
+                    <h3>What we can do with NCURSES ?</h3></li>
+                <p><span class="font_mark">NCURSES</span> 는 터미널 기능의 wrapper 를 만들어줄 뿐만 아니라 텍스트모드에서 멋진 <abbr title="User Interface">UI</abbr> 를 만들수 있는 튼튼한 프레임웍도 제공합니다. 그것은 윈도우등을 만들 수 있는 함수를 제공합니다. 그것의 자매 라이브러리인 패널, 메뉴, 폼등은 기본적인 curses 라이브러리에 확장성을 제공합니다.
                     <br>이 라이브러리들은 보통 curses 와 같이 설치됩니다. 누구나 다중 윈도우와 메뉴, 패털 그리고
                     <br>폼을 포함하고 있는 어플리케이션을 작성할 수 있습니다.</p>
                 <p><span class="font_mark">NCURSES</span> 는 보통 설치할때 자동으로 깔리기 때문에 우리는 이제 컴파일을 해보겠습니다.</p>
                 <li class="tetrisBlock">
                     <h3>Compiling With the NCURSES Library</h3></li> <img src="compile.PNG" width=100% height=300px alt="Not display" class="image_border" title="compiling">
-		<p>위 프로그램은 화면을 저장하고 컴파일할때는 <span class="font_em">g++ -o hello hello.cpp -lncurses</span>로 컴파일을 합니다.<br> 여기서 프로젝트를 직접 진행하면서 얻은 팁은 나중에 되면 파일 갯수가 늘어나게 되므로 컴파일할때도 명령어가 길어지게 되므로 makefile을 만들면 make 만 입력하게되면 컴파일을 손쉽게 할수 있습니다. <a href="makefile.html">makefile</a>은<br> 다음 장에서 소개하겠습니다. </p>
+                <p>위 프로그램은 화면을 저장하고 컴파일할때는 <span class="font_em">g++ -o hello hello.cpp -lncurses</span>로 컴파일을 합니다. 여기서 프로젝트를 직접 진행하면서 얻은 팁은 나중에 되면 파일 갯수가 늘어나게 되므로 컴파일할때도 명령어가 길어지게 되므로 makefile을 만들면 make 만 입력하게되면 컴파일을 손쉽게 할수 있습니다. <a href="makefile.html">makefile</a>은 다음 장에서 소개하겠습니다. </p>
                 <li class="tetrisBlock">
                     <h3>Initialization functions</h3></li>
                 <p>수업시간에 알려주신 함수 이외에 몇가지 함수를 소개하겠습니다.</p>
@@ -101,6 +102,8 @@
                 <br> Made by WonYong Jang</p>
         </div>
     </div>
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript" src="functionList.js"></script>
 </body>
 
 </html>

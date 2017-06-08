@@ -2,15 +2,17 @@
 <html>
 
 <head>
+    <title>How To make Tetris</title>
     <meta charset="utf-8">
     <meta name="description" content="How to make tetris" />
     <meta name="author" content="geikil@gmail.com" />
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="search.css">
     <link rel="stylesheet" type="text/css" href="font.css">
-    <title>How To make Tetris</title>
+     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <style>
         .tetrisBlock {
+            
             list-style-image: url('tetrisList4.png');
             padding: 5px 5px;
         }
@@ -24,6 +26,18 @@
             color: dodgerblue;
             text-decoration: underline;
         }
+        legend {font-size:15pt; font-weight: :700;}
+        caption {text-align:left; color:red; font-size:11pt;}
+        input[type="text"] {width:60px;}
+        #name {width:80px;}
+        table {width:630px; margin:auto;}
+        fieldset {width:350px; height:360px; display:inline;}
+        .output{left:430px; height:343px; top:25px;}
+        input[type="button"] {width:70px; font-size:12pt;}
+        th{color:red;}
+        td{font-weight:500;}
+        .right{text-align:right; font-weight: 500;}
+        .left{ text-align:left;}
     </style>
 </head>
 
@@ -62,6 +76,70 @@
                     <li class="source"><a href="http://bowbowbow.tistory.com/12" target="_blank">makefile</a></li>
                     <br> </ol>
             </ul>
+            <fieldset style="margin:0 50pt;">
+                <legend>확인 문제</legend><br>
+                <table>
+                    <caption>
+                        <p>지금까지 배웠던 내용을 확인해 보는 문제입니다.<br>이름과 답을 입력한 후 완료 단추를
+                           눌러주세요. 정답은 노란색으로 표시 됩니다.</p>
+                    </caption>
+                    <tr>
+                        <td colspan="3" class="right">
+                            이름: <input type="text" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="left">1.&nbsp;&nbsp;</th>
+                        <td id="add">여러가지 파일을 한번에 컴파일해주는 명령어?</td>
+                        <td class="right"><input type="text" id="one"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">2.&nbsp;&nbsp;</th>
+                        <td id="minus">System V Release 4.0 의 curse의 클론 ?(소문자입력)</td>
+                        <td class="right"><input type="text" id="two"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">3.&nbsp;&nbsp;</th>
+                        <td id="multiple">방향키 같은 기능키들을 입력받을수 있게 하는 함수는?(알파벳만 입력)</td>
+                        <td class="right"><input type="text" id="three"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">4.&nbsp;&nbsp;</th>
+                        <td id="divide">사용자가 터미널에 입력한 문자들을 제어할수 있는 함수?(알파벳만 입력)</td>
+                        <td class="right"><input type="text" id="four"></td>
+                    </tr>
+                    <tr>
+                        <th class="left">5.&nbsp;&nbsp;</th>
+                        <td id="op">Web Client 수업 지도교수님 성함은??!!</td>
+                        <td class="right"><input type="text" id="five"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                    <th colspan="3">
+                    <input type="button" value="완료" onclick="output()">
+                    </th>
+                    </tr>
+                </table>
+            </fieldset>
+              <p style="text-align:center; margin:30pt 10pt -40pt 10pt"> 한 학기 동안 고생하셨습니다. 호빵을 클릭 해 보세요~</p>
+               <div id="hobbang" style="height:300px; border:2px solid silver; text-align:center; margin:60px">
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang01.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang04.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang02.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang03.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang01.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang03.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang04.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang02.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang04.gif" />
+		        <img style="position:relative;" onclick="animHobbang(this)" src="http://biketago.com/img/etc/hobbang05.gif" />
+	           </div>
+     
+             <script type="text/javascript" src="jquery.js"></script>
+             <script type="text/javascript" src="functionList.js"></script>
+            
             <div class="up">
                 <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
             </div>

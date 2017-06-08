@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="search.css">
     <link rel="stylesheet" type="text/css" href="font.css">
     <title>How To make Tetris</title>
+    
     <style>
         .tetrisBlock {
             list-style-image: url('tetrisList5.png');
@@ -30,7 +31,7 @@
             <h1>How to make Tetris !</h1> </div>
         <div class="nav-left">
             <ul class="nav-list">
-                <li class="nav-item"><a href="index.html" class="nav-link">Introduction</a></li>
+                <li class="nav-item"><a href="main.html" class="nav-link">Introduction</a></li>
                 <li class="nav-item"><a href="firstSteps.html" class="nav-link">First Steps</a></li>
                 <li class="nav-item"><a href="makefile.html" class="nav-link">Makefile</a></li>
                 <li class="nav-item"><a href="algorithm.html" class="nav-link">Algorithm</a></li>
@@ -48,7 +49,17 @@
                     <br> 그러면 클래스별로 또는 기능별로 여러개의 파일이 나뉘게 되는데 makefile 은 꼭 필요한 것처럼
                     <br> 보입니다. 그리고 교수님 ppt를 참고하면 구조적인 면은 해결 되니 참고하셔서 진행하시길 바랍니다.
                     <li class="tetrisBlock">
-                        <h3>Implement</h3></li> 1차 제출은 구조적인 부분만 제출하면 되므로 기능적인 면은 추후에 올리겠습니다. </ul>
+                        <h3>Implement</h3></li>
+                       <p> 중간고사 이후 테트리스 3차 제출하실때 참고 하시기 바랍니다.<br> 내리기 버튼을 누르면
+                        Block 을 그리는 알고리즘이 나옵니다.</p>
+                    <div style="width:500px; margin:0 auto; overflow:hidden; position:relative; text-align:center; border:1px solid silver;">
+                    <img id="implement" style="position:relative; top:-400px;" src="algorithmSource.png" />
+                    </div>
+                    <input type="button" value="내리기" onclick="$('#implement').stop().animate({top:0}, 500);">
+                    <input type="button" value="올리기" onclick="$('#implement').stop().animate({top:-400}, 500);">
+
+            </ul>
+                        
             <div class="up">
                 <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
             </div>
@@ -68,6 +79,9 @@
                 <br> Made by WonYong Jang</p>
         </div>
     </div>
+    <script type="text/javascript" src="functionList.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
 </body>
 
 </html>

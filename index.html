@@ -16,9 +16,10 @@
         h2::before {
             content: url('tetrisBlock5.png');    
             padding: 10px;
-        }
+        }  
     </style>
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    
   </head>
   <body>
     <audio autoplay loop>
@@ -40,6 +41,57 @@
       
       <div class="content">
         <h2>  For those with difficulties in Tetris assignment !</h2>
+        
+    <div class="slide_board" style="margin:10pt 30pt">
+        <div class="slide_section" id="leftMove">
+            <div class="move_arrow">◀</div>
+        </div>
+        <div class="animation_canvas">
+            <div class="slider_panel">
+                <img class="slider_image" src="tetrisScreen.png">
+                <img class="slider_image" src="gamePlaying.png">
+                <img class="slider_image" src="intermediateStage.PNG">
+                <img class="slider_image" src="clearOneLine.PNG">
+                <img class="slider_image" src="gameEnd.png">
+            </div>
+            <div class="slider_text_panel">
+                <div class="slider_text">
+                    <h3>Initial Screen</h3>
+                    <p>It is a screen that is visible before the start of the game.</p>
+                </div>
+                <div class="slider_text">
+                    <h3>Starting game</h3>
+                    <p>The difficulty level and score for each level are recorded.</p>
+                </div>
+                <div class="slider_text">
+                    <h3>Starting game</h3>
+                    <p>The game method is the same as the existing Tetris.</p>
+                </div>
+                <div class="slider_text">
+                    <h3>Starting game</h3>
+                    <p>When a line becomes full, it is automatically erased.</p>
+                </div>
+                <div class="slider_text">
+                    <h3>Game over</h3>
+                    <p>If there is no room to fill the block anymore, the game will end.</p>
+                </div>
+            </div>
+            <div class="control_panel">
+                <div class="control_button">1</div>
+                <div class="control_button">2</div>
+                <div class="control_button">3</div>
+                <div class="control_button">4</div>
+                <div class="control_button">5</div>
+                <div class="controlStop_button" id="stopSlider">stop</div>
+            </div>
+        </div>
+        <div class="slide_section" id="rightMove">
+            <div class="move_arrow">▶</div>
+        </div>
+    </div>
+       
+        
+        
         <p>This page is that it was created to help you with your assignment about making tetris.<br>
          I'll tell you step by step with photos from the beginning.
         <br>Also, I will refer to c++ professor's data for further explanation.<br> I do not tell you everything about making tetris. 
@@ -81,5 +133,20 @@
         Made by WonYong Jang</p>
       </div>
     </div>
+    
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="functionList.js"></script>
+    
   </body>
 </html> 
+
+
+
+
+
+
+
+
+
+
+

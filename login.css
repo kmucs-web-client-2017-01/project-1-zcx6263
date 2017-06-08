@@ -41,7 +41,7 @@
 .clear {
      clear: both; /* 오른쪽 왼쪽 취소 깔끔하게 정렬하기위해서 */
 }
-input[type="submit"] { /* 로그인하기 버튼에만 효과 주기 */
+input[type="button"] { /* 로그인하기 버튼에만 효과 주기 */
      float: left;
      height: 54px;
      background: #FFBB00;

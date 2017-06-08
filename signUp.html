@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="description" content="How to make tetris" />
@@ -9,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="signUp.css">
     <link rel="stylesheet" type="text/css" href="search.css">
     <link rel="stylesheet" type="text/css" href="font.css">
+    
     <title>How To make Tetris</title>
 </head>
-
 <body>
     <audio autoplay loop>
         <source src="music.mp3" type="audio/mpeg"> </audio>
@@ -28,40 +27,42 @@
             </ul>
         </div>
         <div class="content">
-            <form class="signUp">
+            <form class="signUp" id="signUp1">
                 <fieldset>
                     <legend>
-                        <h3>회원가입</h3></legend>
+                        <h3>회원가입(1/2)</h3></legend>
                     <table border="1" width="750" height="400">
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">이름</td>
                             <td>
-                                <input type="text" />
+                                <input type="text" /><span hidden="hidden">  Type your name.</span>
                             </td>
                         </tr>
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">아이디</td>
                             <td>
-                                <input type="text" />
-                                <input type="submit" value="아이디 중복검사" /> </td>
+                                <input type="text" id="userID">
+                                <input type="button" onclick="checkID()" value="아이디 유효성검사" />
+                                <span id="idCheck"></span>
+                            </td>
                         </tr>
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">암호</td>
                             <td>
-                                <input type="password" />
+                                <input id="password" type="password" ><span hidden="hidden"> 암호는 8~16 자리수 입니다.</span>
                             </td>
                         </tr>
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">암호확인</td>
                             <td>
-                                <input type="password" />
+                                <input id="checkPassword" type="password" ><span hidden="hidden"> 암호는 8~16 자리수 입니다.</span>
                             </td>
                         </tr>
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">주민번호</td>
                             <td>
-                                <input type="text" maxlength="6" size="6" /> -
-                                <input type="text" maxlength="7" size="7" /> </td>
+                                <input id="securityNum1" type="text" maxlength="6" size="6" > -
+                                <input id="securityNum2" type="text" maxlength="7" size="7" ><span hidden="hidden">숫자만 입력하세요</span> </td>
                         </tr>
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">연락처</td>
@@ -73,8 +74,93 @@
                                     <option value="t017">017</option>
                                     <option value="t019">019</option>
                                 </select> -
-                                <input type="text" maxlength="4" size="4" /> -
-                                <input type="text" maxlength="4" size="4" /> </td>
+                                <input id="phoneNum1" type="text" maxlength="4" size="4" > -
+                                <input id="phoneNum2" type="text" maxlength="4" size="4" >
+                                <span hidden="hidden">숫자만 입력하세요</span> </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">학년</td>
+                            <td>
+                                <select name="selinfor">
+                                    <option value="0">1학년</option>
+                                    <option value="1">2학년</option>
+                                    <option value="2">3학년</option>
+                                    <option value="3">4학년</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">메일링</td>
+                            <td>
+                                <input type="radio" id="ag1" name="yes" checked="checked" />
+                                <label name="yes" for="ag1">받겠습니다.</label>
+                                <input type="radio" id="ag2" name="yes" />
+                                <label name="yes" for="ag2">받지않겠습니다.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">성별</td>
+                            <td>
+                                <input type="checkbox" id="agree">
+                                <label for="agree">남</label>
+                                <input type="checkbox" id="agree">
+                                <label for="agree">여</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button onclick="continuePage()" type="button">다음페이지</button>
+                    <button type="reset" id="resetButton">다시쓰기</button><span id="display-1"></span>
+                </fieldset>
+            </form>
+            
+             <form class="signUp" style="display:none;" id="signUp2">
+                <fieldset>
+                    <legend>
+                        <h3>회원가입(2/2)</h3></legend>
+                    <table border="1" width="750" height="400">
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">주소</td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">상세주소</td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">이메일주소</td>
+                            <td>
+                                <input id="password" type="password" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">각오</td>
+                            <td>
+                                <input id="checkPassword" type="password" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">주민번호</td>
+                            <td>
+                                <input id="securityNum1" type="text" maxlength="6" size="6" > -
+                                <input id="securityNum2" type="text" maxlength="7" size="7" > </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFCC">전화번호</td>
+                            <td>
+                                <select>
+                                    <option value="t010">02</option>
+                                    <option value="t011">031</option>
+                                    <option value="t016">032</option>
+                                    <option value="t017">053</option>
+                                    <option value="t019">055</option>
+                                </select> -
+                                <input id="phoneNum1" type="text" maxlength="4" size="4" > -
+                                <input id="phoneNum2" type="text" maxlength="4" size="4" > </td>
                         </tr>
                         <tr>
                             <td align="center" bgcolor="#FFFFCC">코딩경력</td>
@@ -90,12 +176,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" bgcolor="#FFFFCC">메일링</td>
+                            <td align="center" bgcolor="#FFFFCC">검색경로</td>
                             <td>
-                                <input type="radio" id="ag1" name="yes" checked="checked" />
-                                <label name="yes" for="ag1">받겠습니다.</label>
-                                <input type="radio" id="ag2" name="yes" />
-                                <label name="yes" for="ag2">받지않겠습니다.</label>
+                                <input type="radio" name="yes" checked="checked" />
+                                <label name="yes">webclient</label>
+                                <input type="radio" name="yes" />
+                                <label name="yes">tetris</label>
                             </td>
                         </tr>
                         <tr>
@@ -107,10 +193,12 @@
                         </tr>
                     </table>
                     <br>
-                    <button type="submit">가입하기</button>
-                    <button type="reset">다시쓰기</button>
+                    <button onclick="passwordCheck()" type="submit">가입하기</button>
+                    <button type="reset" id ="resetButton">다시쓰기</button><span id="display-1"></span>
+                    <button onclick="backPage()" type="button">뒤로가기</button>
                 </fieldset>
             </form>
+            
             <div class="up">
                 <a href="#header"><img src="up.png" width="50" height="50" title="위로가기"></a>
             </div>
@@ -130,6 +218,10 @@
                 <br> Made by WonYong Jang</p>
         </div>
     </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="functionList.js"></script>
+    
 </body>
 
 </html>

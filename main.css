@@ -1,75 +1,197 @@
 .container {
-        width: 1300px;
-        margin: 0px auto;
-        padding: 20px;
-        border: 1px solid #bcbcbc;
-	    background-image:url("main2.jpeg");
+    width: 1300px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+    background-image: url("main2.jpeg");
 }
+
 .header {
-        padding: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-style: italic;
-    	text-shadow: 0 0 10px #666;
-        border: 1px solid #bcbcbc;
-    	background:#333;
-    	color:#fff;
-    	border-radius:5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 0 0 10px #666;
+    border: 1px solid #bcbcbc;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
 }
+
 .nav-left {
-        width: 160px;
-        padding: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        float: left;
-        border: 1px solid #bcbcbc;
-        background: #333;
-        color:#fff;
+    width: 160px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background: #333;
+    color: #fff;
 }
-.nav-list{
-        list-style:none;
-        margin:0;
-        padding:10px 0;
-        }
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
 .nav-item {
-         margin: 4px 0;
+    margin: 4px 0;
 }
+
 .content {
-        width: 800px;
-        padding: 20px;
-        margin-bottom: 20px;
-        float: left;
-        border: 1px solid #bcbcbc;
-    	background:#F5F5F5;
+    width: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background: #F5F5F5;
 }
-.nav-link{
-        display:block;
-        text-decoration: none;
-        padding: 4px 10px;
-        color:#fff;
-        }
-.nav-link:hover{
-        background: #5457de;
-        }
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    padding: 4px 10px;
+    color: #fff;
+}
+
+.nav-link:hover {
+    background: #5457de;
+}
+
 .nav-right {
-        width: 160px;
-        padding: 20px;
-        margin-bottom: 20px;
-        float: right;
-        border: 1px solid #bcbcbc;
-        background: #333;
-        color:#fff;
+    width: 160px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: right;
+    border: 1px solid #bcbcbc;
+    background: #333;
+    color: #fff;
 }
+
 .footer {
-        clear: both;
-        font-size: 10px;
-        font-style: italic;
-        border: 1px solid #bcbcbc;
-        text-align:center;
-	    background:#D3D3D3;
+    clear: both;
+    font-size: 10px;
+    font-style: italic;
+    border: 1px solid #bcbcbc;
+    text-align: center;
+    background: #D3D3D3;
 }
-.up {             /* 헤더로 올라가기 */
-	 position:fixed; 
-	 bottom:5px; 
-	 right:5px;
-	}
+
+.up {
+    /* 헤더로 올라가기 */
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* 애니메이션 캔버스 */
+.animation_canvas {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 600px;
+}
+.slide_section {
+    float: left;
+}
+.slide_board {
+    height: 400px;
+}
+.move_arrow {
+    height: 400px;
+    display: table-cell;
+    vertical-align: middle;
+}
+/* 슬라이드 패널 */
+.slider_panel {
+    width: 3000px;
+    position: relative;
+}
+/* 슬라이드 이미지 */
+.slider_image {
+    float: left;
+    width: 600px;
+    height: 400px;
+}
+/* 슬라이드 텍스트 패널 */
+.slider_text_panel {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+.slider_text {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+}
+.slider_text > h3 {
+    background-color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 25px
+}
+.slider_text > p {
+    background-color: #C0C0C0;
+    opacity: 0.5;
+}
+/* 컨트롤 패널  */
+.control_panel {
+    position: absolute;
+    top: 375px;
+    left: 240px;
+    height: 20px;
+    overflow: hidden;
+}
+.control_button {
+    font-size: 11px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #D4D4D4;
+    background-color: #F4F4F4;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+/* 컨트롤 마우스 오버  */
+.control_button:hover {
+    border: 1px solid #F4F4F4;
+    background-color: #D4D4D4;
+    color: #FFFFFF;
+}
+/* 컨트롤 현재 영역  */
+
+.control_button.active {
+    border: 1px solid #24822A;
+    background-color: #24822A;
+    color: #FFFFFF;
+}
+
+.controlStop_button {
+    font-size: 11px;
+    width: 25px;
+    height: 13px;
+    border: 1px solid #D4D4D4;
+    background-color: #F4F4F4;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+.controlStop_button:hover {
+    border: 1px solid #F4F4F4;
+    background-color: #D4D4D4;
+    color: #FFFFFF;
+}
+/* 컨트롤 현재 영역  */
+.controlStop_button.active {
+    border: 1px solid #24822A;
+    background-color: #24822A;
+    color: #FFFFFF;
+}

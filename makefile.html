@@ -27,6 +27,7 @@
             border: 1px solid black;
         }
     </style>
+     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             </ul>
         </div>
         <div class="content" width:600>
-            <h2>  What is Makefile & Make ?</h2>
+            <h2>  What is <span id="blink">Makefile & Make ?</span></h2>
             <ul>
                 <p>여러개의 파일을 컴파일 할때 <span class="font_mark">make</span> 명령어 하나로 실행할수 있다? 가능합니다! </p>
                 <p class="font_em"><span class="font_mark">make</span> 는 파일간의 종속관계를 파악하여 Makefile 에 적힌대로 컴파일러에 명령하여
@@ -60,16 +61,16 @@
                         <li>단순 반복 작업 및 재작성을 최소화</li>
                     </ol>
                     <li class="tetrisBlock">
-                        <h3>For example</h3></li> <img src="makefile_Ex.jpg" width=100% height=300px alt="Not display" title="makefile" class="image_border">
+                        <h3>For example</h3></li> <img onmouseenter="bigger(this)" onmouseleave="normal(this)" src="makefile_Ex.jpg" width=100% height=300px alt="Not display" title="makefile" class="image_border">
                     <p>예시를 통해서 기본적인 컴파일 방법과 <span class="font_mark">make</span>를 이용한 컴파일 방법을 비교해 보겠습니다.</p>
                     <ol type="I">
-			<li><p class="font_size"> c 파일에서 object 파일 생성하기</p>
-                            <br> <img src="makefile_Ex2.PNG" width=100% height=300px alt="Not display" title="compiling" class="image_border">
+                        <li> c 파일에서 object 파일 생성하기
+                            <br> <img onmouseenter="bigger(this)" onmouseleave="normal(this)" src="makefile_Ex2.PNG" width=100% height=300px alt="Not display" title="compiling" class="image_border">
                             <p>위의 사진에서 우리는 ncurses를 이용하고 있으므로 각각 <span class="font_em">-lncurses</span> 를 붙여 줘야 합니다!!
                                 <br> 각각 파일에 대해서 object 파일 생성후 <span class="font_em">g++ -o diary_exe main.o memo.o calendar.o <br>-lncurses</span> 를 또한 입력해줘야 한다.</p>
                         </li>
-			<li><p class="font_size"><span class="font_mark">make</span>를 이용한 컴파일 과정</p>
-                            <br> <img src="makefile_Ex3.PNG" width=100% height=300px alt="Not display" title="compiling" class="image_border">
+                        <li> <span class="font_mark">make</span>를 이용한 컴파일 과정
+                            <br> <img onmouseenter="bigger(this)" onmouseleave="normal(this)" src="makefile_Ex3.PNG" width=100% height=300px alt="Not display" title="compiling" class="image_border">
                             <p class="font_em">주의할 점은 makefile에서 위의 사진의 tab 부분은 반드시 tab을 써야합니다.
                                 <br> 이렇게 작성후 <span class="font_mark">make</span> 명령어 하나로 컴파일이 가능합니다!</p>
                         </li>
@@ -94,6 +95,9 @@
                 <br> Made by WonYong Jang</p>
         </div>
     </div>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="functionList.js"></script>
+   
 </body>
 
 </html>
